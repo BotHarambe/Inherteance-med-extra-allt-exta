@@ -10,12 +10,27 @@ namespace ConsoleApp6
     {
         static void Main(string[] args)
         {
+            bool årtal = false;
             Cat myCat = new Cat();
-            myCat.Name = "Fluffy";
-            myCat.Age = 5;
+            Console.WriteLine("Skriv namn");
+            myCat.Namn = Console.ReadLine() ;
+
+            while (!årtal) {
+                Console.WriteLine("Skriv år");
+               if (int.TryParse(Console.ReadLine(), out int år)) {
+                    
+                    myCat.år = år;
+                    årtal = true;
+                }
+
+                else
+                {
+                    Console.WriteLine("du skrev fel fixa");
+                }
+            }
             
-            Console.WriteLine("Namn" + myCat.Name);
-            Console.WriteLine("år" + myCat.Age);
+            Console.WriteLine("Namn = " + myCat.Namn);
+            Console.WriteLine("år = " + myCat.år);
 
 
             Console.ReadLine();
