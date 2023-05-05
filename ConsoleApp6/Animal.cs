@@ -9,16 +9,19 @@ namespace ConsoleApp6
     public class Animal
     {
         public string Namn { get; set; }
-        public int år { get; set; }
-
-       
+        public int År { get; set; }
 
     }
 
     public class Cat : Animal
     {
-       
+        public Cat(string namn, int age)
+        {
+            Namn = namn;
+            År = age;
+        }
+   
     }
 
-
+    
 }
