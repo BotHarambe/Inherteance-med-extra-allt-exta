@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp6
 {
+    //klass animal med egenskaper namn och år
     public class Animal
     {
         public string Namn { get; set; }
@@ -13,8 +14,10 @@ namespace ConsoleApp6
 
     }
 
+    // annan class Cat som ärver från animal
     public class Cat : Animal
     {
+        // Konbsturktor som tar in namn och ålder och ställer i dem i Animal klassen
         public Cat(string namn, int age)
         {
             Namn = namn;

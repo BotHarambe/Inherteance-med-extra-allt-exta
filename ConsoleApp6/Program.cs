@@ -10,12 +10,13 @@ namespace ConsoleApp6
     {
         static void Main(string[] args)
         {
+            // variabler 
             string namn;
             bool årtal = false;
             int år = 0;
 
             Console.WriteLine("Skriv namn");
-            namn = Console.ReadLine();
+            namn = Console.ReadLine(); // Läser namnet och lagrar i varibalen "namn"
 
             // Skapar en ny instans 
             Cat myCat = new Cat(namn, år);
