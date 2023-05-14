@@ -11,20 +11,23 @@ namespace ConsoleApp6
     {
         public string Namn { get; set; }
         public int År { get; set; }
-
     }
 
-    // annan class Cat som ärver från animal
     public class Cat : Animal
     {
-        // Konbsturktor som tar in namn och ålder och ställer i dem i Animal klassen
-        public Cat(string namn, int age)
-        {
-            Namn = namn;
-            År = age;
-        }
-   
-    }
+        public string Ras { get; set; }
 
-    
+        public Cat(string name, int age, string breed)
+        {
+            Namn = name;
+            År = age;
+            Ras = breed;
+        }
+
+        public override string ToString()
+        {
+            // generar en string repestrion of Cat klassen
+            return $"Katt: {Namn}, År: {År}, Ras: {Ras}";
+        }
+    }
 }
